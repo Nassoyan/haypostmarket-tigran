@@ -1,0 +1,82 @@
+.header_wrapper {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .header_title {
+        display: flex;
+        height: 36px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        background: #F5F5F5;
+        padding: 0 275px;
+    }
+     .covid_content {
+         color: #0063BD;
+     }
+        .header_title_contact {
+            color: #0063BD;
+            display: flex;
+            gap: 213px;
+        }
+          .header_language {
+              display: flex;
+              justify-content: center;
+              gap: 7px;
+          }
+
+   .header_content {
+     display: flex;
+     height: 89px;
+     align-items: center;
+     padding: 0 275px;
+     width: 100%;
+       .header_left_content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 45px;
+          margin-right: 41px;
+       }
+            .header_menubar {
+                display: flex;
+                 justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                color: #0063BD;
+            }
+                    .header_arrow {
+                        margin-left: 10px;
+                        margin-bottom: 5px;
+                    }
+                    
+                        .header_input_container {
+                            max-width: 30%;
+                            width: 100%;
+                            height: 47px;
+                            position: relative;
+                            padding-right: 10px;
+                        }
+                            .header_input{
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 26px;
+                                background: #F5F5F5;
+                                border: none;
+                                outline-style: none;
+                            }
+                                ::placeholder {
+                                    padding-left: 23px;
+                                }
+                                    .input_search_box {
+                                        background: #0063BD;
+                                        width: 72px;
+                                        height: 47px;
+                                        display: grid;
+                                        place-items: center;
+                                        border-radius: 0px 30px 30px 0px;
+                                        
+                                    }
+                        }
+                    }
