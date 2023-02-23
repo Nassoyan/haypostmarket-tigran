@@ -1,5 +1,20 @@
 * {
     margin: 0;padding: 0;box-sizing: border-box;
+  
 }
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url("../public/fonts/NotoSans-Regular.ttf");
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url('../public/fonts/Roboto-Light.ttf');
+  }
+  @font-face {
+    font-family: 'Armenian';
+     src: url('../public/fonts/NotoSansArmenian-Regular.ttf');
+  }
+
 
 

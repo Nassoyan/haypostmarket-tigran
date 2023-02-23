@@ -7,10 +7,10 @@
         display: flex;
         // height: 36px;
         justify-content: space-between;
-        align-items: center;
         font-size: 13px;
         background: #F5F5F5;
         padding: 10px 275px;
+        font-family: Armenian;
     }
      .covid_content {
          color: #0063BD;
@@ -19,6 +19,11 @@
             color: #0063BD;
             display: flex;
             gap: 213px;
+            font-size: 15px;
+            font-family: Roboto;
+            .header_title_contact_span {
+                white-space: nowrap
+            }
         }
           .header_language {
               display: flex;
@@ -27,68 +32,77 @@
           }
 
    .header_content {
-     display: flex;
-     height: 89px;
-     align-items: center;
-     padding: 0 275px;
-     width: 100%;
-       .header_left_content {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 45px;
-          margin-right: 41px;
-       }
-            .header_menubar {
+       display: flex;
+       justify-content: space-between;
+       padding: 21px 275px;
+       width: 100%;
+        .header_svg_box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 10px;
+        }
+            .header_svg_container {
                 display: flex;
-                 justify-content: center;
                 align-items: center;
-                font-size: 16px;
-                color: #0063BD;
-                white-space: nowrap;
-                
-                svg {
-                    margin-right: 4px;
-                }
-
+                gap: 36px;
+                margin-left: 166px;
+                font-family: Armenian;
             }
-                    .header_arrow {
-                        margin-left: 10px;
-                        margin-bottom: 5px;
-                    }
-                    
-                        .header_input_container {
-                            max-width: 30%;
-                            width: 100%;
-                            height: 47px;
-                            position: relative;
-                            padding-right: 10px;
-                            display: flex;
-
-
-                            .input_search_box {
-                                background: #0063BD;
-                                width: 72px;
-                                height: 47px;
-                                display: grid;
-                                place-items: center;
-                                border-radius: 0px 30px 30px 0px;
-                                min-width: 72px;
+                .header_left_content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 45px;
+                    margin-right: 41px;
+                }
+                     .header_menubar {
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
+                         font-size: 16px;
+                         color: #0063BD;
+                         white-space: nowrap;
+                         
+                            svg {
+                                margin-right: 4px;
                             }
+
                         }
-                            .header_input{
-                                width: 100%;
-                                height: 100%;
-                            
-                                border-bottom-left-radius: 26px;
-                                border-top-left-radius: 26px;
-                                background: #F5F5F5;
-                                border: none;
-                                outline-style: none;
-                            }
-                                ::placeholder {
-                                    padding-left: 23px;
+                                .header_arrow {
+                                    margin-left: 10px;
+                                    margin-bottom: 5px;
                                 }
-                                    
-                        }
+                                    .header_input_container {
+                                        max-width: 576px;
+                                        width: 100%;
+                                        height: 47px;
+                                        display: flex;
+                                        .input_search_box {
+                                            background: #0063BD;
+                                            width: 72px;
+                                            height: 47px;
+                                            display: grid;
+                                            place-items: center;
+                                            border-radius: 0px 30px 30px 0px;
+                                            min-width: 72px;
+                                        }
+                                    }
+                                        .header_input{
+                                            width: 100%;
+                                            height: 100%;
+                                            border-bottom-left-radius: 26px;
+                                            border-top-left-radius: 26px;
+                                            background: #F5F5F5;
+                                            border: none;
+                                            outline-style: none;
+                                            padding-left: 23px;
+                                            font-family: Armenian;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 22px;
+                                        }
+                                            
+                                                
+                                    }
                     }

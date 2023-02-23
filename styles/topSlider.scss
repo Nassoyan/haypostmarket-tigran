@@ -1,0 +1,93 @@
+.topslider_show_image {
+  width: 100%;
+  background: #281E78;
+  min-height: 600px;
+  display: flex !important;
+  position: relative;
+
+  .topslider_arrowright {
+    width: 70px;
+    height: 70px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 86px;
+    top: 269px;
+  }
+
+  .topslider_arrowleft {
+    width: 70px;
+    height: 70px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 61px;
+    top: 269px;
+  }
+  
+    img {
+      position: absolute;
+      right: 540px;
+      top: 82px;
+      z-index: 11;
+    }
+  
+  .topslider_slidercircle1 {
+    position: absolute;
+    padding: 0 0 265px 195px;
+    z-index: 1;
+  }
+    .topslider_right_content {
+      width: 491px;
+      height:491px;
+      background: linear-gradient(90deg, #FF5523 20.43%, #F2C655 118.67%);
+      border-radius: 10px;
+      position: absolute;
+      top: 55px;
+      right: 275px;
+      z-index: 0;
+        .topslide_slidercircle2 {
+          position: absolute;
+          right: 0;
+        }
+        
+
+    }
+      .topslider_left_content {
+        padding: 165px 0 0 276px;
+          .nike-title {
+            font-family:Noto Sans;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 82px;
+            color: #FFFFFF;
+          }
+              .slider-performance {
+              font-weight: 400;
+              font-size: 24px;
+              line-height: 36px;
+              color: #FFFFFF;
+              margin-top: 39px;
+              font-family: Roboto;
+              }
+                .topslider_shopnow {
+                  background: #F18E00;
+                  border-radius: 4px;
+                  outline-style: none;
+                  border: none;
+                  padding: 16px 126px;
+                  margin-top: 55px;
+                  color: #FFFFFF;
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 22px
+                }
+        }
+}
