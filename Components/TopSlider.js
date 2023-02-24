@@ -27,29 +27,28 @@ function TopSlider(){
       slidesToScroll: 1,
     };
     return (
-      <div>
+      <div className="slider-wrapper">
         <Slider ref={(x) => (slideRef.current = x)} {...settings}>
           <div className="topslider_show_image">
             <div onClick={prev} className="topslider_arrowleft">
              <ArrowLeft/>
             </div>
             <span className="topslider_slidercircle1"><SliderCircle1/></span>
-            
-            <div className="topslider_left_content">
-                <p className="nike-title">NIke Men Running</p>
-                <p className="slider-performance">Performance and design. Taken right to the edge.</p>
-                <button className="topslider_shopnow">Shop Now</button>
-            </div>
-            <div className="topslider_right_content">
-              <span className="topslide_slidercircle2"><SliderCircle2/></span>
-                
-            </div>
-                <Image
-                alt="shoes"
-                src={shoes}
-                width={489}
-                height={437}
-              />
+              <div className="topslider_left_content">
+                  <p className="nike-title">NIke Men Running</p>
+                  <p className="slider-performance">Performance and design. Taken right to the edge.</p>
+                  <button className="topslider_shopnow">Shop Now</button>
+              </div>
+              <div className="topslider_right_content">
+                <span className="topslide_slidercircle2"><SliderCircle2/></span>
+                  
+              </div>
+                  <Image
+                  alt="shoes"
+                  src={shoes}
+                  width={489}
+                  height={437}
+                  />
                 <div onClick={next} className="topslider_arrowright">
                   <ArrowRight />
                 </div>

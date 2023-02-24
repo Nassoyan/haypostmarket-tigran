@@ -1,0 +1,27 @@
+.description_images_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 107px;
+     .description_images_box {
+        padding: 0 275px;
+        display: flex;
+        justify-content: space-between;
+     }
+         .description_text {
+            display: flex;
+            padding: 0 598px;
+            gap: 55px;
+            justify-content: center;
+            font-family: Armenian;
+            padding-top: 68px;
+             span {
+                white-space: nowrap;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 27px;
+                color: #C9C9C9;
+                font-style: normal;
+             }
+         }
+     }

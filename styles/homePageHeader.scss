@@ -1,12 +1,9 @@
 .header_wrapper {
-
-    display: flex;
-    flex-direction: column;
     width: 100%;
     .header_title {
         display: flex;
-        // height: 36px;
         justify-content: space-between;
+        min-width: max-content;
         font-size: 13px;
         background: #F5F5F5;
         padding: 10px 275px;
@@ -27,8 +24,10 @@
         }
           .header_language {
               display: flex;
-              justify-content: center;
-              gap: 7px;
+              svg {
+                margin-left: 7px;
+                margin-top: 3px;
+              }
           }
 
    .header_content {
@@ -74,7 +73,6 @@
                                     margin-bottom: 5px;
                                 }
                                     .header_input_container {
-                                        max-width: 576px;
                                         width: 100%;
                                         height: 47px;
                                         display: flex;
@@ -106,3 +104,9 @@
                                                 
                                     }
                     }
+
+@media only screen and (max-width: 1620px) {
+    .header_title_contact_span {
+        display: none;
+    }
+  }

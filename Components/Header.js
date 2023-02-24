@@ -14,7 +14,7 @@ function Header() {
     <div className="header_wrapper">
       <div className="header_title">
         <div className="covid_content">
-            <span>COVID-19 համավարակկկով պայմանավորված՝ հնարավոր են առաքման ժամկետների ուշացումներ:</span>
+            <span>COVID-19 համավարակով պայմանավորված՝ հնարավոր են առաքման ժամկետների ուշացումներ:</span>
         </div>
         <div className="header_title_contact">
             <span className="header_title_contact_span">Contact info 099 99 99 90</span>
