@@ -5,6 +5,10 @@
 }
 
 @font-face {
+  font-family: "Poppins";
+  src: url("../public/fonts/Poppins-Regular.ttf");
+}
+@font-face {
   font-family: "Noto Sans";
   src: url("../public/fonts/NotoSans-Regular.ttf");
 }
@@ -17,14 +21,27 @@
   src: url("../public/fonts/NotoSansArmenian-Regular.ttf");
 }
 
-.container {
-  width: 1470px;
-  @media screen and (max-width: 1470px) {
-    width: 100%;
-  }
-  @media screen and (max-width: 1520px) {
-    padding: 0 20px;
+// .container {
+//   width: 1470px;
+//   @media screen and (max-width: 1470px) {
+//     width: 100%;
+//   }
+//   @media screen and (max-width: 1580px) {
+//     padding: 0 50px;
 
+//   }
+//   margin: auto;
+// }
+.container{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1570px;
+  padding: 0 50px;
+  margin: 0 auto;
+
+  .left-panel{
+    display: flex;
+    width: 100%;
+    max-width: 998px;
   }
-  margin: auto;
 }

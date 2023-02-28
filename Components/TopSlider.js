@@ -28,9 +28,43 @@ function TopSlider() {
     slidesToScroll: 1,
   };
   return (
-    <div className="slider-wrapper">
       <Slider ref={(x) => (slideRef.current = x)} {...settings}>
-        <div className="topslider_show_image">
+        <div className="topslider-container">
+          <div onClick={prev} className="topslider_arrowleft">
+              <ArrowLeft />
+          </div>
+
+
+          <div className="container">
+            <div className="topslider_left_content">
+              <div className="topslider_left_content_inner">
+                <p className="nike-title">NIke Men Running</p>
+                <p className="slider-performance">
+                  Performance and design. Taken right to the edge.
+                </p>
+                <button className="topslider_shopnow">Shop Now</button>
+              </div>
+            </div>
+            <div className="topslider_right_content">
+              <span className="topslide_slidercircle2">
+               <SliderCircle2 />
+              </span>
+            </div>
+          </div>
+
+
+          <div onClick={next} className="topslider_arrowright">
+            <ArrowRight />
+          </div>
+        </div>
+      </Slider>
+    
+  );
+}
+
+export default TopSlider;
+
+{/* <div className="topslider_show_image">
           <div onClick={prev} className="topslider_arrowleft">
             <ArrowLeft />
           </div>
@@ -71,10 +105,4 @@ function TopSlider() {
         </div>
         <div className="divik">
           <h1>6</h1>
-        </div>
-      </Slider>
-    </div>
-  );
-}
-
-export default TopSlider;
+        </div> */}

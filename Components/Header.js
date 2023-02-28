@@ -22,6 +22,7 @@ function Header() {
               <span className="header_title_contact_span">
                 Contact info 099 99 99 90
               </span>
+              <span className="hidden_times_symbol"><Times/></span>
               <span className="header_language">
                 Հայ
                 <HeaderArrow />
@@ -34,7 +35,10 @@ function Header() {
           <div className="container">
             <div className="left-panel">
               <div className="header_left_content">
-                <div>
+                <div className="hidden_menubar">
+                      <MenuBar/>
+                </div>
+                <div className="haypost_logo">
                   <HaypostLogo />
                 </div>
                 <div className="header_menubar">
@@ -61,19 +65,19 @@ function Header() {
                 <span className="times_svg">
                   <Times />
                 </span>
-                <span> Հեռացնել </span>
+                <span className="header_svg_box_text"> Հեռացնել </span>
               </div>
-              <div className="header_svg_box">
+              <div className="header_svg_box header_svg_box_hidden">
                 <span>
                   <HeaderIcon />
                 </span>
-                <span> Մուտք </span>
+                <span className="header_svg_box_text"> Մուտք </span>
               </div>
-              <div className="header_svg_box">
+              <div className="header_svg_box header_svg_box_hidden">
                 <span>
                   <Zambyugh />
                 </span>
-                <span> Զամբյուղ </span>
+                <span className="header_svg_box_text"> Զամբյուղ </span>
               </div>
             </div>
           </div>
