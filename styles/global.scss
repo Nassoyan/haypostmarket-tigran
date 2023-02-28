@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../public/fonts/NotoSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../public/fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Armenian";
+  src: url("../public/fonts/NotoSansArmenian-Regular.ttf");
+}
+
+.container {
+  width: 1470px;
+  @media screen and (max-width: 1470px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 1520px) {
+    padding: 0 20px;
+
+  }
+  margin: auto;
+}

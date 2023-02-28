@@ -1,13 +1,17 @@
 .header_wrapper {
     width: 100%;
     .header_title {
-        display: flex;
-        justify-content: space-between;
-        min-width: max-content;
-        font-size: 13px;
         background: #F5F5F5;
-        padding: 10px 275px;
-        font-family: Armenian;
+        
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-family: Armenian;
+        }
     }
      .covid_content {
          color: #0063BD;
@@ -19,7 +23,12 @@
             font-size: 15px;
             font-family: Roboto;
             .header_title_contact_span {
-                white-space: nowrap
+                white-space: nowrap;
+                $breakpoint-tablet: 920px;
+                @media (max-width: $breakpoint-tablet) {
+                    display: none;
+                }
+                
             }
         }
           .header_language {
@@ -31,10 +40,24 @@
           }
 
    .header_content {
-       display: flex;
-       justify-content: space-between;
-       padding: 21px 275px;
        width: 100%;
+
+       
+    
+      .container {
+          display: flex;
+          justify-content: space-between;
+          gap: 166px;
+
+        & > .left-panel {
+            display: flex;
+           justify-content: space-between;
+           padding: 21px 0;
+           gap: 41px;
+           width: 100%;
+ 
+        }
+      }
         .header_svg_box {
             display: flex;
             flex-direction: column;
@@ -45,7 +68,6 @@
                 display: flex;
                 align-items: center;
                 gap: 36px;
-                margin-left: 166px;
                 font-family: Armenian;
             }
                 .header_left_content {
@@ -53,7 +75,6 @@
                     justify-content: space-between;
                     align-items: center;
                     gap: 45px;
-                    margin-right: 41px;
                 }
                      .header_menubar {
                          display: flex;
@@ -105,8 +126,31 @@
                                     }
                     }
 
-@media only screen and (max-width: 1620px) {
-    .header_title_contact_span {
-        display: none;
-    }
-  }
+@media only screen and (max-width: 1600px) {
+    // .header_title_contact_span {
+    //     display: none;
+    // }
+}
+
+
+// @media only screen and (max-width: 920px) {
+//     .header_wrapper {
+//         .header_title {
+//             padding: 10px 49px;
+//             flex: 1;
+//             justify-content: center;
+    
+//             .header_title_contact {
+//                 display: none;
+//             }
+//         }
+//         .header_content {
+//             padding: 21px 49px;
+//             width: 100%;
+    
+//         }
+
+//     }
+    
+
+//   }
