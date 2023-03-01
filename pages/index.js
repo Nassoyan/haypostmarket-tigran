@@ -1,5 +1,6 @@
 import Description from "@/Components/Description";
 import Header from "@/Components/Header";
+import ProductSlider from "@/Components/ProductSlider";
 import TopSlider from "@/Components/TopSlider";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <TopSlider />
       <Description />
+      <ProductSlider/>
     </>
   );
 }

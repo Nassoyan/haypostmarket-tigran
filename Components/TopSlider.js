@@ -1,12 +1,11 @@
 import SliderCircle1 from "@/public/svg/sliderCircle1";
-import slider from "react-slick";
 import Image from "next/image";
 import shoes from "../public/images/shoes.png";
 import SliderCircle2 from "@/public/svg/sliderCircle2";
 import ArrowLeft from "@/public/svg/ArrowLeft";
 import ArrowRight from "@/public/svg/ArrowRight";
 import { useRef } from "react";
-import Slider from "react-slick/lib/slider";
+import Slider from "react-slick";
 
 function TopSlider() {
   const slideRef = useRef(null);
