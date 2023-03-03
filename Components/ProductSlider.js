@@ -108,6 +108,7 @@ function ProductSlider() {
                         <div className="each_slide" key={index}>
                             <Image 
                             src={el}
+                            alt="img"
                             />
                             <div className="each_slide_description">
                                 <p className="slide_first_p">SAMSUNG</p>

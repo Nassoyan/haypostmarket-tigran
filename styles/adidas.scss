@@ -1,4 +1,45 @@
 .adidas {
     background: #646376;
     margin-top: 60px;
+    
+    .container {
+        $breakpoint-tablet:768px;
+                    @media(max-width:$breakpoint-tablet){
+                        padding-top: 41px;
+                    }
+        .adidas_right_content {
+        }
+        .topslider_left_content {
+            .topslider_left_content_inner {
+                font-family: Noto Sans;
+                .nike_title {
+                    font-weight: 700;
+                    font-size: 60px;
+                    line-height: 82px;
+                    $breakpoint-tablet:992px;
+                    @media(max-width:$breakpoint-tablet){
+                        font-size: 22px;
+                        line-height: 33px;
+                    }
+                    $breakpoint-tablet:768px;
+                    @media(max-width:$breakpoint-tablet){
+                        font-size: 20px;
+                        line-height: 27px;
+                    }
+                }
+                .slider-performance {
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 36px;
+                    $breakpoint-tablet:768px;
+                    @media(max-width:$breakpoint-tablet){
+                        font-size: 12px;
+                        line-height: 18px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
 }

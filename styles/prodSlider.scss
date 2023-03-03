@@ -9,7 +9,7 @@
     line-height: 27px;
     color: #C9C9C9;
     font-family: Armenian;
-    $breakpoint-tablet:920px;
+    $breakpoint-tablet:992px;
     @media(max-width:$breakpoint-tablet){
        gap: 43px;
        font-size: 12px;
@@ -40,6 +40,10 @@
         .slick-track {
             .slick-slide>div {
                 margin: 0 10px;
+                $breakpoint-tablet:768px;
+                    @media(max-width:$breakpoint-tablet){
+                        margin: 0 12px;
+                    }
             }
         }
     }
@@ -51,6 +55,7 @@
         img {
             width: 100%;
             object-fit: cover;
+            height: auto;
         }
     }
  }
@@ -75,10 +80,15 @@
             font-size: 22px;
             line-height: 30px;
             color: #F18E00;
-            $breakpoint-tablet:920px;
+            $breakpoint-tablet:992px;
             @media(max-width:$breakpoint-tablet){
                 font-size: 18px;
                 line-height: 25px;
+            }
+            $breakpoint-tablet:768px;
+            @media(max-width:$breakpoint-tablet){
+                font-size: 16px;
+                line-height: 22px;
             }
             
         }
@@ -87,7 +97,7 @@
             font-size: 18px;
             line-height: 25px;
             color: #5F6D7C;
-            $breakpoint-tablet:920px;
+            $breakpoint-tablet:992px;
             @media(max-width:$breakpoint-tablet){
                 font-size: 15px;
                 line-height: 20px;
@@ -105,7 +115,7 @@
         line-height: 20px;
         color: #000000;
         opacity: 0.6;
-        $breakpoint-tablet:920px;
+        $breakpoint-tablet:992px;
             @media(max-width:$breakpoint-tablet){
                 line-height: 16px;
                 font-size: 12px;
@@ -116,7 +126,7 @@
         font-size: 20px;
         line-height: 27px;
         color: #004494;
-        $breakpoint-tablet:920px;
+        $breakpoint-tablet:992px;
             @media(max-width:$breakpoint-tablet){
                 font-size: 16px;
                 line-height: 22px;

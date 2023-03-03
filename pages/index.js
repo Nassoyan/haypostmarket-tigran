@@ -1,5 +1,6 @@
 import Adidas from "@/Components/Adidas";
 import Description from "@/Components/Description";
+import Footer from "@/Components/Footer";
 import Header from "@/Components/Header";
 import ProductSlider from "@/Components/ProductSlider";
 import TopProducts from "@/Components/TopProducts";
@@ -14,6 +15,7 @@ export default function Home() {
       <ProductSlider/>
       <Adidas/>
       <TopProducts/>
+      <Footer/>
     </>
   );
 }

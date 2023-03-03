@@ -12,18 +12,17 @@ function TopProducts() {
         
         <div className="container products">
           <div className="girlImage">
-              <Image src={girlImg}/>
-              <button>Հագուստ</button>
+              <Image alt="img" src={girlImg}/>
           </div>
           <div className="middle_side_images">
-              <Image className="middle_top_image" src={glass} />
+              <Image className="middle_top_image" alt="img" src={glass} />
               <div className="middle_under_images">
-              <Image src={bag}/>
-              <Image src={girlShoes}/>
+              <Image alt="img" src={bag}/>
+              <Image alt="img" src={girlShoes}/>
               </div>
           </div>
           <div className="girlImage">
-              <Image src={jewelry}/>
+              <Image alt="img" src={jewelry}/>
           </div>
         </div>
     </div>

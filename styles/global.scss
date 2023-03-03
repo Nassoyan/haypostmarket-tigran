@@ -38,6 +38,11 @@
   max-width: 1570px;
   padding: 0 50px;
   margin: 0 auto;
+  $breakpoint-tablet:768px;
+  @media(max-width:$breakpoint-tablet){
+    padding: 0 15px;
+
+  }
 
   .left-panel{
     display: flex;

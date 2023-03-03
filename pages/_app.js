@@ -7,6 +7,7 @@ import "../styles/description.scss";
 import "../styles/prodSlider.scss"
 import "../styles/adidas.scss"
 import "../styles/topProducts.scss"
+import "../styles/footer.scss"
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;

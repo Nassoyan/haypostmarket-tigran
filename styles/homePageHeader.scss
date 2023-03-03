@@ -99,7 +99,7 @@
             font-size: 10px;
 
             .header_svg_box_text {
-                $breakpoint-tablet: 920px;
+                $breakpoint-tablet: 992px;
                 @media (max-width: $breakpoint-tablet) {
                         display: none;
                 }
@@ -131,6 +131,10 @@
                          @media(max-width: $breakepoint-tablet) {
                             gap: 20px;
                          }
+                    $breakepoint-tablet: 992px;
+                         @media(max-width: $breakepoint-tablet) {
+                            align-items: unset;
+                         }
 
                          .haypost_logo {
                             $breakepoint-tablet: 768px;
@@ -148,7 +152,7 @@
                             justify-content: center;
                             align-items: center;
 
-                            $breakepoint-tablet: 920px;
+                            $breakepoint-tablet: 992px;
                             @media(max-width: $breakepoint-tablet) {
                                 display: flex;
                                 svg path{
@@ -165,7 +169,7 @@
                          font-size: 16px;
                          color: #0063BD;
                          white-space: nowrap;
-                         $breakepoint-tablet: 920px;
+                         $breakepoint-tablet: 992px;
                          @media(max-width: $breakepoint-tablet) {
                             display: none;
                          }
@@ -183,13 +187,13 @@
                                         width: 100%;
                                         height: 47px;
                                         display: flex;
-                                        $breakepoint-tablet:920px;
+                                        $breakepoint-tablet:992px;
                                             @media(max-width:$breakepoint-tablet) {
                                                 height: 35px;
                                             }
 
                                         input {
-                                            $breakepoint-tablet:920px;
+                                            $breakepoint-tablet:992px;
                                             @media(max-width:$breakepoint-tablet) {
                                                 font-size: 14px;
                                                 line-height: 19px;
@@ -206,7 +210,7 @@
                                             border-radius: 0px 30px 30px 0px;
                                             min-width: 72px;
 
-                                            $breakepoint-tablet:920px;
+                                            $breakepoint-tablet:992px;
                                             @media(max-width:$breakepoint-tablet) {
                                                 display: none;
                                             }

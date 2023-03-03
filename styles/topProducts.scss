@@ -12,35 +12,38 @@
             color: #0063BD;
             margin-top: 71px;
             margin-bottom: 53px;
-            $breakpoint-tablet:920px;
+            $breakpoint-tablet:992px;
             @media(max-width:$breakpoint-tablet){
                 font-size: 14px;
                 line-height: 19px;
-      }
+                margin-top: 25px;
+                margin-bottom: 20px;
+            }
         }
         .girlImage {
             width: 24.2%;
             position: relative;
-            button {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: #FFFFFF;
-                opacity: 0.8;
-                border-radius: 50px;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 17px;
-                border:none;
-                height: 35px;
-                color: #0063BD;
-            }
+            // button {
+            //     position: absolute;
+            //     top: 50%;
+            //     left: 50%;
+            //     transform: translate(-50%, -50%);
+            //     background: #FFFFFF;
+            //     opacity: 0.8;
+            //     border-radius: 50px;
+            //     font-weight: 400;
+            //     font-size: 14px;
+            //     line-height: 17px;
+            //     border:none;
+            //     height: 35px;
+            //     color: #0063BD;
+            // }
             img {
                 object-fit: cover;
                 width: 100%;
-                $breakpoint-tablet:920px;
+                $breakpoint-tablet:992px;
                 @media(max-width:$breakpoint-tablet){
+                    height: auto;
                     font-size: 14px;
                     line-height: 19px;
                 }
@@ -51,6 +54,10 @@
             width: 46%;
             img {
                 object-fit: cover;
+                $breakpoint-tablet:992px;
+                @media(max-width:$breakpoint-tablet){
+                    height: auto;
+                }
             }
             .middle_top_image {
                 width: 100%;
@@ -59,8 +66,16 @@
                 width: 100%;
                 display: flex;
                 gap: 34px;
+                $breakpoint-tablet:768px;
+                    @media(max-width:$breakpoint-tablet){
+                        gap: 0;
+                    }
                 img {
                     width: 47%;
+                    $breakpoint-tablet:992px;
+                    @media(max-width:$breakpoint-tablet){
+                        height: auto;
+                    }
                 }
             }
         }
