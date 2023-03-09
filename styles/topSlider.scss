@@ -5,6 +5,10 @@
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+    $breakpoint-tablet:768px;
+    @media(max-width:$breakpoint-tablet){
+      padding: 0 15px;
+     }
     
     .topslider_arrowleft {
       width: 70px;
@@ -35,16 +39,15 @@
        .container {
         display: flex;
         justify-content: space-between;
-        max-width: 1570px;
+        max-width: 1470px;
         margin: 0 auto;
         padding: 55px 50px;
         width: 100%;
 
-        // $breakpoint-tablet:1250px;
-        // @media(max-width:$breakpoint-tablet){
-        //    flex-direction: column;
-        //    align-items: center;
-        // }
+        $breakpoint-tablet:768px;
+        @media(max-width:$breakpoint-tablet){
+           padding: 55px 0px;
+        }
         
          .topslider_left_content {
           color: #FFFFFF;

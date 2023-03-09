@@ -28,11 +28,11 @@
  .shopnow_slider {
     display: flex;
     align-items: center;
-    max-width: 1570px;
+    max-width: 1470px;
     margin: 0 auto;
     gap: 40px;
     margin-top: 43px;
-    $breakpoint-tablet:928px;
+    $breakpoint-tablet:992px;
         @media(max-width:$breakpoint-tablet){
             padding: 0 15px;
     }
@@ -41,14 +41,14 @@
             padding: 0 25px;
     }
     .SliderPrevArrow {
-        $breakpoint-tablet:768px;
+        $breakpoint-tablet:992px;
         @media(max-width:$breakpoint-tablet){
             display: none;
     }
 
     }
     .SliderNextArrow {
-        $breakpoint-tablet:768px;
+        $breakpoint-tablet:992px;
         @media(max-width:$breakpoint-tablet){
             display: none;
     }
@@ -70,8 +70,11 @@
     
     .each_slide {
         border-radius: 10px 10px 0px 0px;
-        max-width: 110%;
         border-radius: 10px;
+        $breakpoint-tablet:768px;
+                    @media(max-width:$breakpoint-tablet){
+                        margin-left:  6px;
+                    }
         img {
             width: 100%;
             object-fit: cover;

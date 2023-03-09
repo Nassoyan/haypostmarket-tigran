@@ -1,6 +1,5 @@
 import ArrowLeft from "@/public/svg/ArrowLeft"
 import ArrowRight from "@/public/svg/ArrowRight"
-import { useRef } from "react"
 import img from "../public/images/Rectangle 1046 (4).png"
 import Image from "next/image"
 
@@ -8,7 +7,7 @@ import Slider from "react-slick";
 
 
 const images = [
-    img, img, img, img, img, img, img, img, img, img
+   img, img, img, img, img, img, img
 ]
 
 function ProductSlider() {
@@ -109,6 +108,10 @@ function ProductSlider() {
                             <Image 
                             src={el}
                             alt="img"
+                            width="100%" 
+                            height="100%" 
+                            layout="responsive" 
+                            
                             />
                             <div className="each_slide_description">
                                 <p className="slide_first_p">SAMSUNG</p>

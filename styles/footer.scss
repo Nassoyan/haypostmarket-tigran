@@ -43,11 +43,11 @@
             padding-top: 12px;
             padding-bottom: 58px;
         }
-           $breakpoint-tablet:768px;
+           $breakpoint-tablet:992px;
            @media(max-width:$breakpoint-tablet){
             padding-top: 10px;
             padding-bottom: 30px;
-            overflow: hidden;
+            overflow:hidden;
         }
            
         }
@@ -55,7 +55,7 @@
         .footer_ul_container {
             display: flex;
             justify-content: space-between;
-            max-width: 1570px;
+            max-width: 1470px;
             padding: 0 50px 44px 50px ;
             margin: 0 auto;
             $breakpoint-tablet:768px;
@@ -104,6 +104,8 @@
                     $breakpoint-tablet:768px;
                     @media(max-width:$breakpoint-tablet){
                         gap: 9px;
+                        line-height: 33px;
+
                     }
                 }
             }

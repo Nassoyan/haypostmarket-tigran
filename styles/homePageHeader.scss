@@ -15,6 +15,10 @@
             @media (max-width: $breakpoint-tablet) {
                 padding: 5px 50px;
         }
+            $breakpoint-tablet: 768px;
+            @media (max-width: $breakpoint-tablet) {
+                padding: 5px 15px;
+        }
         }
     }
      .covid_content {
@@ -72,7 +76,7 @@
       .container {
           display: flex;
           justify-content: space-between;
-          gap: 166px;
+          gap: 175px;
           $breakpoint-tablet: 1200px;
               @media (max-width: $breakpoint-tablet) {
                     gap: 25px;
@@ -85,9 +89,13 @@
                 padding: 21px 0;
                 gap: 41px;
                 width: 100%;
+                $breakpoint-tablet: 992px;
+                @media (max-width: $breakpoint-tablet) {
+                        gap: 25px;
+                }
                 $breakpoint-tablet: 768px;
                 @media (max-width: $breakpoint-tablet) {
-                        gap: 20px;
+                        gap: 13px;
                 }
  
         }
@@ -97,6 +105,30 @@
             flex-direction: column;
             align-items: center;
             font-size: 10px;
+            cursor: pointer;
+            >span {
+                >svg {
+                    width: 30px;
+                    height: 30px;
+                    $breakpoint-tablet: 992px;
+                    @media (max-width: $breakpoint-tablet) {
+                            width: 17px;
+                            height: 17px;
+                    }
+                }
+                >svg path{
+                    width: 30px;
+                    height: 30px;
+                    fill: #5F6D7C;
+                    $breakpoint-tablet: 992px;
+                    @media (max-width: $breakpoint-tablet) {
+                            width: 17px;
+                            height: 17px;
+                    }
+                }
+            }
+
+            
 
             .header_svg_box_text {
                 $breakpoint-tablet: 992px;
@@ -108,11 +140,44 @@
             .header_svg_container {
                 display: flex;
                 align-items: center;
-                gap: 36px;
+                gap: 45px;
                 font-family: Armenian;
+                $breakpoint-tablet: 992px;
+                    @media (max-width: $breakpoint-tablet) {
+                            gap: 20px;
+                    }
+
+                    .profile {
+                        display: none;
+                        $breakpoint-tablet: 992px;
+                            @media (max-width: $breakpoint-tablet) {
+                                    display: unset;
+                            }
+                        $breakpoint-tablet: 768px;
+                            @media (max-width: $breakpoint-tablet) {
+                                    display: none;
+                            }
+                    }
+                    .heart {
+                        display: none;
+                        $breakpoint-tablet: 992px;
+                            @media (max-width: $breakpoint-tablet) {
+                                    display: unset;
+                            }
+                            $breakpoint-tablet: 768px;
+                            @media (max-width: $breakpoint-tablet) {
+                                    display: none;
+                            }
+                    }
 
                 .header_svg_box_hidden {
                     $breakpoint-tablet: 768px;
+                    @media (max-width: $breakpoint-tablet) {
+                            display: none;
+                    }
+                }
+                .zambyugh {
+                    $breakpoint-tablet: 992px;
                     @media (max-width: $breakpoint-tablet) {
                             display: none;
                     }
@@ -122,18 +187,19 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    gap: 45px;
-                    $breakepoint-tablet: 1200px;
-                         @media(max-width: $breakepoint-tablet) {
-                            gap: 30px;
-                         }
-                    $breakepoint-tablet: 1050px;
-                         @media(max-width: $breakepoint-tablet) {
-                            gap: 20px;
-                         }
+                    gap: 43px;
+                    // $breakepoint-tablet: 1200px;
+                    //      @media(max-width: $breakepoint-tablet) {
+                    //         gap: 30px;
+                    //      }
+                    // $breakepoint-tablet: 1050px;
+                    //      @media(max-width: $breakepoint-tablet) {
+                    //         gap: 23px;
+                    //      }
                     $breakepoint-tablet: 992px;
                          @media(max-width: $breakepoint-tablet) {
                             align-items: unset;
+                            gap: 23px;
                          }
 
                          .haypost_logo {
@@ -163,25 +229,29 @@
 
                 }
                      .header_menubar {
+                        font-family: sans-serif;
                          display: flex;
                          justify-content: center;
                          align-items: center;
                          font-size: 16px;
                          color: #0063BD;
                          white-space: nowrap;
+                         cursor: pointer;
                          $breakepoint-tablet: 992px;
                          @media(max-width: $breakepoint-tablet) {
                             display: none;
                          }
                          
-                            svg {
-                                margin-right: 4px;
+                            >svg {
+                                margin-right: 2px;
                             }
 
                         }
                                 .header_arrow {
                                     margin-left: 10px;
-                                    margin-bottom: 5px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
                                 }
                                     .header_input_container {
                                         width: 100%;

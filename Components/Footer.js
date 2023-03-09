@@ -1,4 +1,5 @@
 import Fb from "@/public/svg/Fb"
+import Zara from "@/public/svg/footerSvg/Zara"
 import Instagram from "@/public/svg/Instagram"
 import LinkedIn from "@/public/svg/LinkedIn"
 import Youtube from "@/public/svg/Youtube"
@@ -9,13 +10,13 @@ function Footer() {
 
       <div className="container">
         <div className="brands">
-          <span>item</span>
-          <span>item</span>
-          <span>item</span>
-          <span>item</span>
-          <span>item</span>
-          <span>item</span>
-          <span>item</span>
+          <span><Zara/></span>
+          <span><Zara/></span>
+          <span><Zara/></span>
+          <span><Zara/></span>
+          <span><Zara/></span>
+          <span><Zara/></span>
+          <span><Zara/></span>
         </div>
       </div>
 

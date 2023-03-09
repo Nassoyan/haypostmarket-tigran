@@ -4,9 +4,16 @@ import HeaderIcon from "@/public/svg/HeaderIcon";
 import Search from "@/public/svg/headerInputSearch";
 import MenuBar from "@/public/svg/HeaderMenuBar";
 import Times from "@/public/svg/HeaderTimes";
+import HeartSvg from "@/public/svg/HeartSvg";
+import ProfileSvg from "@/public/svg/profileSvg";
 import Zambyugh from "@/public/svg/Zambyugh";
+import { useState } from "react";
+import Catalog from "./Catalog";
 
 function Header() {
+  const [active, setActive] = useState(false);
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <div className="header_wrapper">
@@ -22,7 +29,9 @@ function Header() {
               <span className="header_title_contact_span">
                 Contact info 099 99 99 90
               </span>
-              <span className="hidden_times_symbol"><Times/></span>
+              <span className="hidden_times_symbol">
+                <Times />
+              </span>
               <span className="header_language">
                 Հայ
                 <HeaderArrow />
@@ -36,20 +45,28 @@ function Header() {
             <div className="left-panel">
               <div className="header_left_content">
                 <div className="hidden_menubar">
-                      <MenuBar/>
+                  <MenuBar />
                 </div>
                 <div className="haypost_logo">
                   <HaypostLogo />
                 </div>
-                <div className="header_menubar">
+                <div
+                  onClick={() => {
+                    setOpen(!open);
+                  }}
+                  className="header_menubar"
+                >
                   <MenuBar />
-                  Բոլոր տեսակները
+                  Ըստ կատեգորիայի
                   <span className="header_arrow">
                     <HeaderArrow />
                   </span>
                 </div>
               </div>
-              <div className="header_input_container">
+              <div
+                style={{ visibility: active ? "hidden" : "visible" }}
+                className="header_input_container"
+              >
                 <input
                   className="header_input"
                   placeholder="Ես փնտրում եմ..."
@@ -61,13 +78,33 @@ function Header() {
               </div>
             </div>
             <div className="header_svg_container">
-              <div className="header_svg_box">
+              <div
+                onClick={() => {
+                  setActive(!active);
+                }}
+                className="header_svg_box"
+              >
                 <span className="times_svg">
-                  <Times />
+                  {!active ? <Times /> : <Search />}
+                </span>
+                <span className="header_svg_box_text">
+                  {" "}
+                  {active ? "Որոնել" : "Հեռացնել"}{" "}
+                </span>
+              </div>
+              <div className="header_svg_box heart">
+                <span className="times_svg">
+                  <HeartSvg />
                 </span>
                 <span className="header_svg_box_text"> Հեռացնել </span>
               </div>
-              <div className="header_svg_box header_svg_box_hidden">
+              <div className="header_svg_box profile">
+                <span className="times_svg">
+                  <ProfileSvg />
+                </span>
+                <span className="header_svg_box_text"> Հեռացնել </span>
+              </div>
+              <div className="header_svg_box header_svg_box_hidden zambyugh">
                 <span>
                   <HeaderIcon />
                 </span>
@@ -82,7 +119,9 @@ function Header() {
             </div>
           </div>
         </div>
+       {open && <Catalog/>}         
       </div>
+
     </>
   );
 }
