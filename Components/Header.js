@@ -9,10 +9,12 @@ import ProfileSvg from "@/public/svg/profileSvg";
 import Zambyugh from "@/public/svg/Zambyugh";
 import { useState } from "react";
 import Catalog from "./Catalog";
+import Login from "./Login";
 
 function Header() {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
+  const [openLogin, setOpenLogin] = useState(false);
 
   return (
     <>
@@ -44,7 +46,12 @@ function Header() {
           <div className="container">
             <div className="left-panel">
               <div className="header_left_content">
-                <div className="hidden_menubar">
+                <div
+                  onClick={() => {
+                    setOpen(!open);
+                  }}
+                  className="hidden_menubar"
+                >
                   <MenuBar />
                 </div>
                 <div className="haypost_logo">
@@ -104,7 +111,12 @@ function Header() {
                 </span>
                 <span className="header_svg_box_text"> Հեռացնել </span>
               </div>
-              <div className="header_svg_box header_svg_box_hidden zambyugh">
+              <div
+                onClick={() => {
+                  setOpenLogin(true);
+                }}
+                className="header_svg_box header_svg_box_hidden zambyugh"
+              >
                 <span>
                   <HeaderIcon />
                 </span>
@@ -119,9 +131,11 @@ function Header() {
             </div>
           </div>
         </div>
-       {open && <Catalog/>}         
+        {open && <Catalog />}
+        {openLogin && (
+          <Login openLogin={openLogin} setOpenLogin={setOpenLogin} />
+        )}
       </div>
-
     </>
   );
 }
