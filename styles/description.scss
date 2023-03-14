@@ -1,4 +1,19 @@
 .desc_wrapper {
+   .desc_text {
+      .desc_text_inner{
+         .each_desc_strokee{
+            border: 2px solid #F18E00;
+            visibility: hidden;
+            margin-top: 25px;
+         }
+            &:hover{
+               >.each_desc_strokee{
+                 visibility: visible;
+               }
+            }
+         
+      }
+   }
       .description {
          padding-top: 107px;
          gap: 32px;
