@@ -10,6 +10,7 @@ import "../styles/topProducts.scss";
 import "../styles/footer.scss";
 import "../styles/catalog.scss";
 import "../styles/login.scss";
+import "../styles/catalogResponsive.scss";
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;

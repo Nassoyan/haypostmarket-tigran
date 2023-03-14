@@ -111,8 +111,18 @@
             }
             .firstImg_inner {
                 position: relative;
+                .X {
+                    $breakpoint-tablet: 992px;
+                    @media (max-width: $breakpoint-tablet) {
+                        display: none;
+                    }
+                }
                 .accesories {
                     padding: 9px 10px !important;
+                    $breakpoint-tablet: 768px;
+                    @media (max-width: $breakpoint-tablet) {
+                        display: unset;
+                    }
                 }
                 .image_buttons {
                     position: absolute;

@@ -10,11 +10,15 @@ import Zambyugh from "@/public/svg/Zambyugh";
 import { useState } from "react";
 import Catalog from "./Catalog";
 import Login from "./Login";
+import { popUp } from "@/public/data/data";
+import CatalogResponsive from "./CatalogResponsive";
 
 function Header() {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false)
+  
 
   return (
     <>
@@ -48,7 +52,8 @@ function Header() {
               <div className="header_left_content">
                 <div
                   onClick={() => {
-                    setOpen(!open);
+                    setOpenMenu(true)
+                    document.body.style.overflow = "hidden";
                   }}
                   className="hidden_menubar"
                 >
@@ -61,7 +66,7 @@ function Header() {
                   onClick={() => {
                     setOpen(!open);
                   }}
-                  className="header_menubar"
+                  className={`header_menubar ${!open && "slaq "}`}
                 >
                   <MenuBar />
                   Ըստ կատեգորիայի
@@ -95,8 +100,7 @@ function Header() {
                   {!active ? <Times /> : <Search />}
                 </span>
                 <span className="header_svg_box_text">
-                  {" "}
-                  {active ? "Որոնել" : "Հեռացնել"}{" "}
+                  {active ? "Որոնել" : "Հեռացնել"}
                 </span>
               </div>
               <div className="header_svg_box heart">
@@ -114,6 +118,8 @@ function Header() {
               <div
                 onClick={() => {
                   setOpenLogin(true);
+                  document.body.style.overflow = "hidden"
+
                 }}
                 className="header_svg_box header_svg_box_hidden zambyugh"
               >
@@ -135,6 +141,9 @@ function Header() {
         {openLogin && (
           <Login openLogin={openLogin} setOpenLogin={setOpenLogin} />
         )}
+        {openMenu && (
+        <CatalogResponsive openMenu={openMenu} setOpenMenu={setOpenMenu}/>
+      )}
       </div>
     </>
   );

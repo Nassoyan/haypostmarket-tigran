@@ -1,61 +1,71 @@
 .desc_wrapper {
    .desc_text {
-      .desc_text_inner{
-         .each_desc_strokee{
-            border: 2px solid #F18E00;
+      .desc_text_inner {
+         .each_desc_strokee {
+            border: 2px solid #f18e00;
             visibility: hidden;
             margin-top: 25px;
          }
-            &:hover{
-               >.each_desc_strokee{
-                 visibility: visible;
-               }
+         &:hover {
+            > .each_desc_strokee {
+               visibility: visible;
             }
-         
+         }
       }
    }
-      .description {
-         padding-top: 107px;
-         gap: 32px;
-         $breakpoint-tablet:768px;
-         @media(max-width:$breakpoint-tablet){
-           display: none;
-          }
-         .each_desc_container {
-           display: flex;
-           align-items: center;
-           background: #FFFFFF;
-           box-shadow: 0px 8px 22px rgba(50, 94, 137, 0.25);
-           border-radius: 10px;
-           gap: 13px;
-           div  {
-               width: 30%;
-               height: -webkit-fill-available;
-               svg {
-                  width: 100%;height: 100%;
+   .description {
+      padding-top: 107px;
+      gap: 32px;
+      $breakpoint-tablet: 768px;
+      @media (max-width: $breakpoint-tablet) {
+         display: none;
+      }
+      .each_desc_container {
+         display: flex;
+         align-items: center;
+         background: #ffffff;
+         box-shadow: 0px 8px 22px rgba(50, 94, 137, 0.25);
+         border-radius: 10px;
+         gap: 13px;
+         &:hover {
+            background: #281e78;
+            .desc_svg_container{
+               >svg :nth-child(1){
+                  fill: #ffffff;
                }
-               
-
+               >svg :nth-child(2){
+                  fill: #281e78;
+               }
             }
-           span {
-           font-family: Armenian;
-           font-weight: 400;
-           font-size: 20px;
-           line-height: 27px;
-           color: #004494;
-           padding-right: 72px;
-           $breakpoint-tablet:992px;
-           @media(max-width:$breakpoint-tablet){
-            font-size: 12px;
-            line-height: 16px;
-           }
+            > span {
+               color: #ffffff;
+            }
+         }
+         div {
+            width: 30%;
+            svg{
+               width: 100%;
+               height: 100%;
+               display: inherit;
+               :nth-child(1){
+                  fill: #50469a;
+               }
+            }
             
          }
-         
+         span {
+            font-family: Armenian;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: #004494;
+            padding-right: 72px;
+            $breakpoint-tablet: 992px;
+            @media (max-width: $breakpoint-tablet) {
+               font-size: 12px;
+               line-height: 16px;
+            }
+         }
       }
    }
 }
-
-
-
-

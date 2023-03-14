@@ -8,19 +8,19 @@ export default function Description() {
     <div className="desc_wrapper">
       <div className="container description">
         <div className="each_desc_container">
-          <div>
+          <div className="desc_svg_container">
             <DescSvg />
           </div>
           <span> Անվճար առաքում</span>
         </div>
         <div className="each_desc_container">
-          <div>
+          <div className="desc_svg_container">
             <DescSvg />
           </div>
           <span> Անվճար առաքում</span>
         </div>
         <div className="each_desc_container">
-          <div>
+          <div className="desc_svg_container">
             <DescSvg />
           </div>
           <span> Անվճար առաքում</span>

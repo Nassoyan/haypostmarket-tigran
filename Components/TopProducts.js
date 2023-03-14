@@ -20,6 +20,7 @@ function TopProducts() {
               src={girlImg}
               alt="Picture of the author"
               layout="intrinsic"
+              loading="lazy"
             />
             <div className="image_buttons">Հագուստ</div>
           </div>
@@ -29,8 +30,9 @@ function TopProducts() {
               src={jewelry}
               alt="Picture of the author"
               layout="intrinsic"
+              loading="lazy"
             />
-            <div className="image_buttons accesories">Աքսեսուարներ</div>
+            <div className="image_buttons accesories X">Աքսեսուարներ</div>
           </div>
         </div>
 
@@ -42,17 +44,24 @@ function TopProducts() {
               src={glass}
               width={616}
               layout="intrinsic"
+              loading="lazy"
             />
             <div className="image_buttons">Աքսեսուարներ</div>
           </div>
 
           <div className="middleImg_under">
             <div className="middleImg_under_divs">
-              <Image alt="Picture of the author" src={bag} layout="intrinsic" />
+              <Image
+                loading="lazy"
+                alt="Picture of the author"
+                src={bag}
+                layout="intrinsic"
+              />
               <div className="image_buttons">Պայուսակ</div>
             </div>
             <div className="middleImg_under_divs">
               <Image
+                loading="lazy"
                 alt="Picture of the author"
                 src={girlShoes}
                 layout="intrinsic"
@@ -63,7 +72,12 @@ function TopProducts() {
         </div>
 
         <div className="lastImg">
-          <Image src={jewelry} alt="Picture of the author" layout="intrinsic" />
+          <Image
+            loading="lazy"
+            src={jewelry}
+            alt="Picture of the author"
+            layout="intrinsic"
+          />
           <div className="image_buttons">Աքսեսուարներ</div>
         </div>
       </div>

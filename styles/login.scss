@@ -10,6 +10,7 @@
   left: 0;
   z-index: 5;
   padding: 0 50px;
+  overflow: hidden;
   $breakepoint-tablet:1050px;
           @media(max-width: $breakepoint-tablet) {
             display: none;
@@ -245,3 +246,4 @@
 button:disabled {
   opacity: 0.35;
 }
+
