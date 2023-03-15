@@ -11,6 +11,7 @@ import "../styles/footer.scss";
 import "../styles/catalog.scss";
 import "../styles/login.scss";
 import "../styles/catalogResponsive.scss";
+import "../styles/register.scss";
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;

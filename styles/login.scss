@@ -18,7 +18,7 @@
    .container_popup {
       display: flex;
       background: linear-gradient(180deg, #6EA5D5 -11%, rgba(255, 255, 255, 0) 100%), #134DA4;
-      border-radius: 10px;
+      border-radius: 5px;
       width: 100%;
       max-width: 1355px;
       position: relative;
@@ -26,7 +26,7 @@
       overflow-y: inherit;
       $breakepoint-tablet:1440px;
           @media(max-width: $breakepoint-tablet) {
-            height: 750px;
+            height: 800px;
           }
       .login_area {
         display: flex;
@@ -118,6 +118,9 @@
               display: flex;
               flex-direction: column;
               gap: 24px;
+              button:disabled {
+                opacity: 0.35;
+              }
               .checkbox-field {
                 display: flex;
                 gap: 5px;
@@ -129,7 +132,7 @@
                   width: 100%;
                   height: 100%;
                   border: 1px solid #B3C7DF;
-                  border-radius: 10px;
+                  border-radius: 5px;
                   padding-left: 50px;
                   font-weight: 400;
                   font-size: 12px;
@@ -243,7 +246,5 @@
   color: red;
 }
 
-button:disabled {
-  opacity: 0.35;
-}
+
 

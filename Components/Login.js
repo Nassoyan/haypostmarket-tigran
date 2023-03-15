@@ -2,11 +2,11 @@ import FacebookLogo from "@/public/svg/FacebookLogo";
 import GoogleLogo from "@/public/svg/GoogleLogo";
 import HaypostLogo from "@/public/svg/HaypostLogo";
 import Image from "next/image";
-import React, { memo } from "react";
+import React, {useState } from "react";
 import loginImg from "../public/images/Loginimg.png";
-import rectangle from "../public/images/rectangle.png";
 import { useFormik } from "formik";
-import { basicSchema } from "./schemas";
+import Register from "./Register";
+import { basicSchema } from "./schemas/loginSchema";
 
 const onSubmit = async (values, actions) => {
   console.log("submitted");
@@ -15,6 +15,8 @@ const onSubmit = async (values, actions) => {
 };
 
 function Login({ openLogin, setOpenLogin }) {
+  const[register, setRegister] = useState(false)
+
   const {
     values,
     errors,
@@ -31,7 +33,6 @@ function Login({ openLogin, setOpenLogin }) {
     validationSchema: basicSchema,
     onSubmit,
   });
-  console.log(values);
   return (
     <div
       onClick={() => {
@@ -61,14 +62,14 @@ function Login({ openLogin, setOpenLogin }) {
           <div className="login-logo">
             <HaypostLogo />
           </div>
-          <div className="haypostlogo_login_container">
+          { !register ? <div className="haypostlogo_login_container">
             <div className="login_header">
               <div className="each_login_button">
-                <button>Մուտք</button>
+                <button >Մուտք</button>
                 <span></span>
               </div>
               <div className="each_login_button">
-                <button>Գրանցվել</button>
+                <button onClick={()=>{setRegister(true)}}>Գրանցվել</button>
                 <span></span>
               </div>
             </div>
@@ -136,7 +137,7 @@ function Login({ openLogin, setOpenLogin }) {
             <div className="forgot-pass-area">
               <a className="forgot-pass">Մոռացել ե՞ք գաղտնաբառը</a>
             </div>
-          </div>
+          </div> : <Register register = {register} setRegister={setRegister}/>}
         </div>
       </div>
     </div>
