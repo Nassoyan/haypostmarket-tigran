@@ -17,8 +17,7 @@ function Header() {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
-  const [openMenu, setOpenMenu] = useState(false)
-  
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <>
@@ -52,7 +51,7 @@ function Header() {
               <div className="header_left_content">
                 <div
                   onClick={() => {
-                    setOpenMenu(true)
+                    setOpenMenu(true);
                     document.body.style.overflow = "hidden";
                   }}
                   className="hidden_menubar"
@@ -118,8 +117,7 @@ function Header() {
               <div
                 onClick={() => {
                   setOpenLogin(true);
-                  document.body.style.overflow = "hidden"
-
+                  document.body.style.overflow = "hidden";
                 }}
                 className="header_svg_box header_svg_box_hidden zambyugh"
               >
@@ -137,13 +135,13 @@ function Header() {
             </div>
           </div>
         </div>
-        {open && <Catalog />}
+        {open && <Catalog open={open} setOpen={setOpen} />}
         {openLogin && (
           <Login openLogin={openLogin} setOpenLogin={setOpenLogin} />
         )}
         {openMenu && (
-        <CatalogResponsive openMenu={openMenu} setOpenMenu={setOpenMenu}/>
-      )}
+          <CatalogResponsive openMenu={openMenu} setOpenMenu={setOpenMenu} />
+        )}
       </div>
     </>
   );

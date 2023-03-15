@@ -7,10 +7,10 @@ function CatalogResponsive({ openMenu, setOpenMenu }) {
     setOpenMenu(false);
     document.body.style.overflow = "unset";
   }
-  
+
   return (
-    <div className="sidebar-wrapper">
-      <div className="sidebar-container">
+    <div className="sidebar-wrapper" onClick={closeMenuBar}>
+      <div className="sidebar-container" onClick={(e) => e.stopPropagation()}>
         <span className="sidebar-close" onClick={closeMenuBar}>
           &times;
         </span>

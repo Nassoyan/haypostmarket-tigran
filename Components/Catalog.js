@@ -1,29 +1,38 @@
 import React from "react";
 
-function Catalog() {
+function Catalog({ open, setOpen }) {
   return (
-    <div className="catalog_wrapper">
-      <div className="catalog_container">
-        <div className="categories">
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
-          <div className="categoryItem">item</div>
+    <div
+      onClick={() => {
+        setOpen(!open);
+      }}
+      className="catalog_wrapper"
+    >
+      <div
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
+        <div className="catalog_container">
+          <div className="categories">
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+            <div className="categoryItem">item</div>
+          </div>
         </div>
-
-        <div className="subcategoriesWrapper"></div>
       </div>
     </div>
   );

@@ -33,15 +33,25 @@ function Login({ openLogin, setOpenLogin }) {
   });
   console.log(values);
   return (
-    <div className="login_wrapper">
-      <div className="container_popup">
+    <div
+      onClick={() => {
+        setOpenLogin(false);
+      }}
+      className="login_wrapper"
+    >
+      <div
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+        className="container_popup"
+      >
         <div className="div">
           <Image alt="img" src={loginImg} />
           <span
             className="times_close_popup"
             onClick={() => {
               setOpenLogin(false);
-              document.body.style.overflow = "unset"
+              document.body.style.overflow = "unset";
             }}
           >
             &times;

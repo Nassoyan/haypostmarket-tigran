@@ -2,22 +2,38 @@
   position: relative;
   display: flex;
   width: 100%;
+  height: 100%;
   justify-content: center;
   padding-left: 140px;
+   >div{
+      background-color: #fff;
+      border: 1px solid rgba(0,0,0,.2);
+      display: flex;
+      position: absolute;
+      overflow: hidden;
+      width: 80%;
+      max-width: 1255px;
+      z-index: 1;
+      font-family: Armenian;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      color: #5F6D7C;
+  }
    .catalog_container {
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,.2);
-    display: flex;
-    position: absolute;
-    overflow: hidden;
-    width: 80%;
-    max-width: 1255px;
-    z-index: 1;
-    font-family: Armenian;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
-    color: #5F6D7C;
+    // background-color: #fff;
+    // border: 1px solid rgba(0,0,0,.2);
+    // display: flex;
+    // position: absolute;
+    // overflow: hidden;
+    // width: 80%;
+    // max-width: 1255px;
+    // z-index: 1;
+    // font-family: Armenian;
+    // font-weight: 700;
+    // font-size: 16px;
+    // line-height: 22px;
+    // color: #5F6D7C;
    }
    .categories {
             padding:  15px 45px 20px 10px;
