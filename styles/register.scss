@@ -17,6 +17,10 @@
           @media(max-width: $breakepoint-tablet) {
             left: 60px;
           }
+          $breakepoint-tablet:895px;
+          @media(max-height: $breakepoint-tablet) {
+            top: 80px;
+          }
 
           .input_hide_arrows{
             > input::-webkit-inner-spin-button{

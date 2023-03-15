@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   z-index: 5;
-  padding: 0 50px;
+  padding: 50px 50px;
   overflow: hidden;
   $breakepoint-tablet:1050px;
           @media(max-width: $breakepoint-tablet) {
@@ -28,6 +28,10 @@
           @media(max-width: $breakepoint-tablet) {
             height: 800px;
           }
+      $breakepoint-tablet:895px;
+          @media(max-height: $breakepoint-tablet) {
+            height: 600px;
+          }
       .login_area {
         display: flex;
         .haypostlogo_login_container {
@@ -44,6 +48,10 @@
           $breakepoint-tablet:1250px;
           @media(max-width: $breakepoint-tablet) {
             left: 70px;
+          }
+          $breakepoint-tablet:895px;
+          @media(max-height: $breakepoint-tablet) {
+            top: 90px;
           }
           .forgot-pass-area {
               margin-top: 24px;
@@ -206,6 +214,10 @@
           position: absolute;
           top: 35px;
           left: 35px;
+          $breakepoint-tablet:895px;
+          @media(max-height: $breakepoint-tablet) {
+            top: 20px;
+          }
         }
       }
       
@@ -217,6 +229,10 @@
         img {
           width: 100%;
           object-fit: cover;
+          $breakepoint-tablet:895px;
+          @media(max-height: $breakepoint-tablet) {
+            height: 100%;
+          }
         }
         .times_close_popup {
           position: absolute;
@@ -225,6 +241,10 @@
           font-size: 42px;
           color: #F5F5F5;
           cursor: pointer;
+          $breakepoint-tablet:895px;
+          @media(max-height: $breakepoint-tablet) {
+            top: 5px;
+          }
         }
         
       }
