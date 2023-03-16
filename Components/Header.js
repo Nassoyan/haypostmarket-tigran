@@ -10,7 +10,6 @@ import Zambyugh from "@/public/svg/Zambyugh";
 import { useState } from "react";
 import Catalog from "./Catalog";
 import Login from "./Login";
-import { popUp } from "@/public/data/data";
 import CatalogResponsive from "./CatalogResponsive";
 
 function Header() {

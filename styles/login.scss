@@ -28,7 +28,7 @@
           @media(max-width: $breakepoint-tablet) {
             height: 800px;
           }
-      $breakepoint-tablet:895px;
+      $breakepoint-tablet:850px;
           @media(max-height: $breakepoint-tablet) {
             height: 600px;
           }
@@ -49,7 +49,7 @@
           @media(max-width: $breakepoint-tablet) {
             left: 70px;
           }
-          $breakepoint-tablet:895px;
+          $breakepoint-tablet:850px;
           @media(max-height: $breakepoint-tablet) {
             top: 90px;
           }
@@ -214,7 +214,7 @@
           position: absolute;
           top: 35px;
           left: 35px;
-          $breakepoint-tablet:895px;
+          $breakepoint-tablet:850px;
           @media(max-height: $breakepoint-tablet) {
             top: 20px;
           }
@@ -229,7 +229,7 @@
         img {
           width: 100%;
           object-fit: cover;
-          $breakepoint-tablet:895px;
+          $breakepoint-tablet:850px;
           @media(max-height: $breakepoint-tablet) {
             height: 100%;
           }
@@ -241,7 +241,7 @@
           font-size: 42px;
           color: #F5F5F5;
           cursor: pointer;
-          $breakepoint-tablet:895px;
+          $breakepoint-tablet:850px;
           @media(max-height: $breakepoint-tablet) {
             top: 5px;
           }

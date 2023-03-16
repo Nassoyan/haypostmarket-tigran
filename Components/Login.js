@@ -12,10 +12,11 @@ const onSubmit = async (values, actions) => {
   console.log("submitted");
   await new Promise((resolve) => setTimeout(resolve, 1000));
   actions.resetForm();
+   
 };
 
 function Login({ openLogin, setOpenLogin }) {
-  const[register, setRegister] = useState(false)
+  const[register, setRegister] = useState()
 
   const {
     values,
@@ -37,12 +38,15 @@ function Login({ openLogin, setOpenLogin }) {
     <div
       onClick={() => {
         setOpenLogin(false);
+        document.body.style.overflow = "auto";
       }}
       className="login_wrapper"
     >
       <div
         onClick={(e) => {
           e.stopPropagation();
+          
+
         }}
         className="container_popup"
       >
@@ -52,7 +56,7 @@ function Login({ openLogin, setOpenLogin }) {
             className="times_close_popup"
             onClick={() => {
               setOpenLogin(false);
-              document.body.style.overflow = "unset";
+              document.body.style.overflow = "auto";
             }}
           >
             &times;

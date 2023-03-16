@@ -1,16 +1,20 @@
 import FacebookLogo from "@/public/svg/FacebookLogo";
 import GoogleLogo from "@/public/svg/GoogleLogo";
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import { regSchema } from "./schemas/registerSchema";
+import LoginMail from "./LoginMail";
 
-const onSubmit = async (values, actions) => {
-  console.log("submitted");
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  actions.resetForm();
-};
+
 
 function Register({ register, setRegister }) {
+  const [open, setOpen] = useState(false)
+console.log(open);
+  const onSubmit = async (values, actions) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    actions.resetForm();
+  };
+
   const {
     values,
     errors,
@@ -32,6 +36,7 @@ function Register({ register, setRegister }) {
     onSubmit,
   });
   return (
+    
     <div className="register_container">
       <div className="login_header">
         <div className="each_login_button">
@@ -49,7 +54,7 @@ function Register({ register, setRegister }) {
           <span></span>
         </div>
       </div>
-
+    {!open ? <LoginMail setOpen={setOpen}/> :
       <div className="input_area">
         <form onSubmit={handleSubmit} autoComplete="off" className="login_form">
           <div className="register_name_surname_container">
@@ -116,7 +121,7 @@ function Register({ register, setRegister }) {
               }
             />
             {errors.phoneNumber && touched.phoneNumber && (
-              <p className="phone-error">Your phonenumber</p>
+              <p className="phone-error">Phonenumber must be at least 8 digits</p>
             )}
           </div>
           <div className="login_input_div">
@@ -155,23 +160,7 @@ function Register({ register, setRegister }) {
             Մուտք
           </button>
         </form>
-      </div>
-
-      <div className="login_underline_area">
-        <div className="login_underline"></div>
-        <div className="login_underline_title">Կամ</div>
-        <div className="login_underline"></div>
-      </div>
-      <div className="login-social-area">
-        <div className="google-area">
-          <GoogleLogo />
-          <span>Google</span>
-        </div>
-        <div className="fb-area">
-          <FacebookLogo />
-          <span>facebook</span>
-        </div>
-      </div>
+      </div>}
     </div>
   );
 }

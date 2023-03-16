@@ -18,6 +18,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
       $breakpoint-tablet:768px;
          @media(max-width:$breakpoint-tablet){
            display: none;
@@ -31,6 +32,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         $breakpoint-tablet:768px;
          @media(max-width:$breakpoint-tablet){
            display: none;
@@ -86,6 +88,7 @@
               color: #FFFFFF;
               width: 55.5%;
               height: 55px;
+              cursor: pointer;
             }
          }
              .topslider_right_content {

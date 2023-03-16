@@ -12,7 +12,15 @@ import "../styles/catalog.scss";
 import "../styles/login.scss";
 import "../styles/catalogResponsive.scss";
 import "../styles/register.scss";
+import "../styles/loginMail.scss";
+
+import { store } from '../Redux/store.js'
+import { Provider } from 'react-redux'
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+  <Provider store={store}>
+    <Component {...pageProps}/>
+  </Provider>
+   );
 }

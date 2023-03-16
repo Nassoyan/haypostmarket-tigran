@@ -41,6 +41,7 @@
             padding: 0 25px;
     }
     .SliderPrevArrow {
+        cursor: pointer;
         $breakpoint-tablet:992px;
         @media(max-width:$breakpoint-tablet){
             display: none;
@@ -48,6 +49,8 @@
 
     }
     .SliderNextArrow {
+        cursor: pointer;
+
         $breakpoint-tablet:992px;
         @media(max-width:$breakpoint-tablet){
             display: none;
