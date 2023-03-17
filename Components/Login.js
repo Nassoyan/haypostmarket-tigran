@@ -7,9 +7,9 @@ import loginImg from "../public/images/Loginimg.png";
 import { useFormik } from "formik";
 import Register from "./Register";
 import { basicSchema } from "./schemas/loginSchema";
+import { checkedEmail } from "@/Redux/slices/authSlice";
 
 const onSubmit = async (values, actions) => {
-  console.log("submitted");
   await new Promise((resolve) => setTimeout(resolve, 1000));
   actions.resetForm();
    
@@ -17,6 +17,9 @@ const onSubmit = async (values, actions) => {
 
 function Login({ openLogin, setOpenLogin }) {
   const[register, setRegister] = useState()
+
+  const checkedEmail = checkedEmail
+  
 
   const {
     values,

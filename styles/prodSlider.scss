@@ -50,7 +50,6 @@
     }
     .SliderNextArrow {
         cursor: pointer;
-
         $breakpoint-tablet:992px;
         @media(max-width:$breakpoint-tablet){
             display: none;

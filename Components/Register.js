@@ -1,19 +1,25 @@
 import FacebookLogo from "@/public/svg/FacebookLogo";
 import GoogleLogo from "@/public/svg/GoogleLogo";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import { regSchema } from "./schemas/registerSchema";
 import LoginMail from "./LoginMail";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { checkedEmail, fetchData } from "@/Redux/slices/authSlice";
+
 
 
 
 function Register({ register, setRegister }) {
   const [open, setOpen] = useState(false)
-console.log(open);
-  const onSubmit = async (values, actions) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    actions.resetForm();
+  const checkEmailstatus = useSelector(checkedEmail)
+console.log(checkEmailstatus,"status1111");
+  const onSubmit =  (values, actions) => {
+    actions.resetForm()
   };
+
+
 
   const {
     values,
@@ -21,8 +27,7 @@ console.log(open);
     touched,
     isSubmitting,
     handleBlur,
-    handleChange,
-    handleSubmit,
+    handleChange
   } = useFormik({
     initialValues: {
       email: "",
@@ -35,6 +40,24 @@ console.log(open);
     validationSchema: regSchema,
     onSubmit,
   });
+
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    const formData = new FormData(event.target)
+    const userData = {
+      name:formData.get("name"),
+      surname: formData.get("surname"),
+      email: formData.get("email"),
+      phoneNumber:formData.get("phonenumber"),
+      password: formData.get("password"),
+      confirmPassword: formData.get("confirmPassword"),
+    };
+    dispatch(fetchData(userData))
+    event.target.value = ""
+  }
+
+  
   return (
     
     <div className="register_container">
@@ -54,13 +77,14 @@ console.log(open);
           <span></span>
         </div>
       </div>
-    {!open ? <LoginMail setOpen={setOpen}/> :
+    {!checkEmailstatus ? <LoginMail setOpen={setOpen}/> :
       <div className="input_area">
         <form onSubmit={handleSubmit} autoComplete="off" className="login_form">
           <div className="register_name_surname_container">
             <div className="reg_name">
             <input
               id="name"
+              name="name"
               value={values.name}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -77,6 +101,7 @@ console.log(open);
             <div className="reg_name">
             <input
               id="surName"
+              name="surname"
               value={values.surName}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -95,6 +120,7 @@ console.log(open);
           <div className="login_input_div">
             <input
               id="email"
+              name="email"
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -111,6 +137,7 @@ console.log(open);
           <div className="login_input_div input_hide_arrows">
             <input
               id="phoneNumber"
+              name="phonenumber"
               value={values.phoneNumber}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -127,6 +154,7 @@ console.log(open);
           <div className="login_input_div">
             <input
               id="password"
+              name="password"
               value={values.password}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -143,6 +171,7 @@ console.log(open);
           <div className="login_input_div">
             <input
               id="confirmPassword"
+              name="confirmPassword"
               value={values.confirmPassword}
               onChange={handleChange}
               onBlur={handleBlur}

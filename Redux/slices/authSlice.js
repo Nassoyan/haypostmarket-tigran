@@ -1,34 +1,47 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 const initialState = {
-  msg: "",
-  user: "",
-  token:"token",
-  oading: false,
+  loading: false,
+  users: [],
   error:"",
+  status:false
 }
 
-export const sighUpUser = createAsyncThunk("signupuser", async () => {
- const res = await fetch("https://arformeback.ayotech.am/api", {
-  method:"post",
+export const fetchData = createAsyncThunk("data/fetchData", async (value) => {
+ const response = await fetch("https://arformeback.ayotech.am/api/check-email", {
+  method:"POST",
   headers:{
     "Content-Type": "application/json",
   },
-  body: JSON.stringify(body)
+  body: JSON.stringify(value)
  })
- return await res.json()
+ return await response.json()
 })
 
 
-const authSlice = createSlice({
-  name: "user",
+const userSlice = createSlice({
+  name: "users",
+  status:"",
   initialState,
-  reducer:{
-    
-  },
-  extraReducers:{
-  
+  reducer:{},
+  extraReducers:(builder) => {
+    builder.addCase(fetchData.pending, (state, action) =>{
+      state.loading = true
+    })
+    .addCase(fetchData.fulfilled, (state, action) =>{
+      state.loading = false
+      state.status = true
+      state.users.push(action.payload)
+      state.error = ""
+    })
+    .addCase(fetchData.rejected, (state, action) =>{
+      state.loading = false
+      state.status = false
+      state.error = action.error.message
+    })
   }
 })
 
-export default authSlice.reducer
+export const checkedEmail = (state) => state.user.status
+
+export default userSlice.reducer

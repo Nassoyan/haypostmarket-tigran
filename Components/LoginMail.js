@@ -3,18 +3,27 @@ import { useFormik } from "formik";
 import { loginMailSchema } from './schemas/loginMailSchema';
 import GoogleLogo from '@/public/svg/GoogleLogo';
 import FacebookLogo from '@/public/svg/FacebookLogo';
-
+import { useDispatch } from 'react-redux';
+import { fetchData } from '@/Redux/slices/authSlice';
+import { useSelector } from 'react-redux';
 
 
 
 
 function LoginMail({setOpen}) {
+  
+  const dispatch = useDispatch()
+  const status =  useSelector((state) => state.user.status)
+console.log(status, "statsu");
 
-    const onSubmit = async (values, actions) => {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        actions.resetForm();
-        setOpen(true);
-      };
+     function onSubmit(event) {
+      console.log(values);
+     
+       dispatch(fetchData({email :values.email}));
+      // setOpen(true)
+    }
+
+      
 
     const {
         values,
@@ -23,14 +32,13 @@ function LoginMail({setOpen}) {
         isSubmitting,
         handleBlur,
         handleChange,
-        handleSubmit,
+        handleSubmit
       } = useFormik({
         initialValues: {
           email: "",
           password: "",
         },
-        validationSchema: loginMailSchema,
-        onSubmit,
+        validationSchema: loginMailSchema, onSubmit
       });
   return (
     <div className='loginmail_container'>
@@ -43,6 +51,7 @@ function LoginMail({setOpen}) {
                 <div className="login_input_div">
                   <input
                     id="email"
+                    name='email'
                     value={values.email}
                     onChange={handleChange}
                     onBlur={handleBlur}
