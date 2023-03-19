@@ -7,7 +7,7 @@ import Times from "@/public/svg/HeaderTimes";
 import HeartSvg from "@/public/svg/HeartSvg";
 import ProfileSvg from "@/public/svg/profileSvg";
 import Zambyugh from "@/public/svg/Zambyugh";
-import { useState } from "react";
+import { memo, useState } from "react";
 import Catalog from "./Catalog";
 import Login from "./Login";
 import CatalogResponsive from "./CatalogResponsive";

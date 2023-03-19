@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 function Catalog({ open, setOpen }) {
   return (
@@ -38,4 +38,4 @@ function Catalog({ open, setOpen }) {
   );
 }
 
-export default Catalog;
+export default memo(Catalog);

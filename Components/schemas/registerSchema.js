@@ -11,7 +11,10 @@ export const regSchema = yup.object().shape({
     .min(5)
     .matches(passworRules, { message: "Please create a stronger password" })
     .required("Required"),
-  confirmPassword: yup.string().oneOf([yup.ref("password"), null]).required("required"),
+  confirmPassword: yup
+    .string()
+    .oneOf([yup.ref("password"), null])
+    .required("required"),
   name: yup.string().required("required"),
   surName: yup.string().required("required"),
   email: yup.string("Please enter a valid email").email().required("required"),

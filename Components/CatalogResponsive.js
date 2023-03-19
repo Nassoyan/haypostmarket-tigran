@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { popUp } from "@/public/data/data";
 import HeaderArrow from "@/public/svg/headerArrow";
 
@@ -39,4 +39,4 @@ function CatalogResponsive({ openMenu, setOpenMenu }) {
   );
 }
 
-export default CatalogResponsive;
+export default memo(CatalogResponsive);
