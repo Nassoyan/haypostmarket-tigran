@@ -2,20 +2,37 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import { regSchema } from "./schemas/registerSchema";
 import LoginMail from "./LoginMail";
-// import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { checkedEmail, fetchData } from "@/Redux/slices/authSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { asyncRegisterThunk } from "@/Redux/slices/registerSlice";
+import { checkedEmail } from "@/Redux/slices/authSlice";
+import { useRouter } from "next/router";
 
 function Register({ register, setRegister }) {
   const [open, setOpen] = useState(false);
+  const router = useRouter()
 
-  const checkEmailstatus = useSelector(checkedEmail);
+  const dispatch = useDispatch();
+  const checkEmailstatus = useSelector(checkedEmail)
 
-  function onSubmit(values, { setSubmitting }) {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-      setSubmitting(false);
-    }, 400);
+  function confirmEmail() {
+    return setTimeout(() => {
+    router.push("/verifyYourEmail")
+  }, 1000)
+}
+
+  function onSubmit() {
+    dispatch(
+      asyncRegisterThunk({
+        account_type: "B2B",
+        name: values.name,
+        surname: values.surName,
+        email: values.email,
+        password:values.password,
+        password_confirmation:values.confirmPassword
+      })
+    );
+    
+    
   }
 
   const {
@@ -32,7 +49,6 @@ function Register({ register, setRegister }) {
       password: "",
       name: "",
       surName: "",
-      phoneNumber: "",
       confirmPassword: "",
     },
     validationSchema: regSchema,
@@ -119,27 +135,6 @@ function Register({ register, setRegister }) {
                 <p className="email-error">Your e-mail</p>
               )}
             </div>
-            <div className="login_input_div input_hide_arrows">
-              <input
-                id="phoneNumber"
-                name="phoneNumber"
-                value={values.phoneNumber}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                type="number"
-                placeholder="Հեռախոսահամար"
-                className={
-                  errors.phoneNumber && touched.phoneNumber
-                    ? "reg-error-phone"
-                    : ""
-                }
-              />
-              {errors.phoneNumber && touched.phoneNumber && (
-                <p className="phone-error">
-                  Phonenumber must be at least 8 digits
-                </p>
-              )}
-            </div>
             <div className="login_input_div">
               <input
                 id="password"
@@ -178,7 +173,9 @@ function Register({ register, setRegister }) {
                 <p className="confirm-error">Password must be the same</p>
               )}
             </div>
-            <button disabled={isSubmitting} type="submit">
+            <button onClick={() => {
+              confirmEmail()
+              }} disabled={isSubmitting} type="submit">
               Մուտք
             </button>
           </form>

@@ -2,14 +2,15 @@ import { useFormik } from "formik";
 import { loginMailSchema } from "./schemas/loginMailSchema";
 import GoogleLogo from "@/public/svg/GoogleLogo";
 import FacebookLogo from "@/public/svg/FacebookLogo";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { asyncFetchData } from "@/Redux/slices/authSlice";
 
 function LoginMail({ setOpen }) {
   const dispatch = useDispatch();
 
+
   function onSubmit() {
-    dispatch(asyncFetchData({ email: values.email }));
+      dispatch(asyncFetchData({ email: values.email }));
   }
 
   const {

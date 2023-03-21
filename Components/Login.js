@@ -2,19 +2,36 @@ import FacebookLogo from "@/public/svg/FacebookLogo";
 import GoogleLogo from "@/public/svg/GoogleLogo";
 import HaypostLogo from "@/public/svg/HaypostLogo";
 import Image from "next/image";
-import React, { memo, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import loginImg from "../public/images/Loginimg.png";
 import { useFormik } from "formik";
 import Register from "./Register";
 import { basicSchema } from "./schemas/loginSchema";
+import { useDispatch } from "react-redux";
+import { asyncLoginThunk } from "@/Redux/slices/loginSlice";
+import { useRouter } from "next/router";
+import Cookies from "js-cookie";
 
-const onSubmit = async (values, actions) => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  actions.resetForm();
-};
 
 function Login({ openLogin, setOpenLogin }) {
   const [register, setRegister] = useState();
+
+  const dispatch = useDispatch()
+
+  const router = useRouter()
+  console.log(router.query.access_token);
+
+  useEffect(() => {
+    Cookies.set("authorized", router.query.access_token)
+  }, [router.query])
+  
+  
+  function onSubmit(){
+     dispatch(asyncLoginThunk({
+        email: values.email,
+        password:values.password,
+     }))
+  };
 
   const {
     values,

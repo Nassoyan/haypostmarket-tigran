@@ -13,6 +13,7 @@ import "../styles/login.scss";
 import "../styles/catalogResponsive.scss";
 import "../styles/register.scss";
 import "../styles/loginMail.scss";
+import "../styles/emailVerify.scss";
 
 import { store } from '../Redux/store.js'
 import { Provider } from 'react-redux'

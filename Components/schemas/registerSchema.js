@@ -5,7 +5,6 @@ const passworRules =
   /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{6,}$/;
 
 export const regSchema = yup.object().shape({
-  phoneNumber: yup.string().min(8).required("required"),
   password: yup
     .string()
     .min(5)

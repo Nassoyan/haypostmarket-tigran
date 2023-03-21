@@ -7,16 +7,26 @@ import Times from "@/public/svg/HeaderTimes";
 import HeartSvg from "@/public/svg/HeartSvg";
 import ProfileSvg from "@/public/svg/profileSvg";
 import Zambyugh from "@/public/svg/Zambyugh";
-import { memo, useState } from "react";
+import { useEffect, useState } from "react";
 import Catalog from "./Catalog";
 import Login from "./Login";
 import CatalogResponsive from "./CatalogResponsive";
+import { useSelector } from "react-redux";
+import { selectVerifiedStatus } from "@/Redux/slices/verifyEmail";
 
 function Header() {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
   const [openLogin, setOpenLogin] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+
+  const verifiedStatus = useSelector(selectVerifiedStatus)
+
+  useEffect(() => {
+    if(verifiedStatus===true){
+      setOpenLogin(true)
+    }
+  }, [verifiedStatus])
 
   return (
     <>
