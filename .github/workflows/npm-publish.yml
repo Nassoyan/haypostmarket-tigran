@@ -21,6 +21,7 @@ jobs:
     - name: Install dependencies
       run: npm install  # Replace with your package manager (e.g., yarn)
 
-    - name: Build and test React app
+    - name: Install dependencies and run tests
       run: |
-        npm test  # Replace with your testing command
+        npm install
+        npm test
