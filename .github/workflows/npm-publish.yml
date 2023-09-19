@@ -3,11 +3,11 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - main  # Adjust the branch name as needed
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
 
     steps:
     - name: Checkout code
@@ -16,11 +16,11 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: 14
+        node-version: 16  # Update to Node.js 16 or a version you prefer
 
     - name: Install dependencies
-      run: npm install
+      run: npm install  # Replace with your package manager (e.g., yarn)
 
     - name: Build and test React app
       run: |
-        npm test  
+        npm test  # Replace with your testing command
