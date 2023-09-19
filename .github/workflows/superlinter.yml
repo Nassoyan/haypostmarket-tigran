@@ -1,18 +1,26 @@
-name: Super-Linter
+name: CI/CD Pipeline
 
-on: push
+on:
+  push:
+    branches:
+      - main  
 
 jobs:
-  super-lint:
-    name: Lint code base
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest  
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Run Super-Linter
-        uses: github/super-linter@v3
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16.14.2
 
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Install dependencies
+      run: npm install  
+
+    - name: Build and test React app
+      run: |
+        npm test  
